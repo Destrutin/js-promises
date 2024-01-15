@@ -102,3 +102,49 @@ axios
                 }
             });
     })
+
+
+//suggestions and improvements
+//1. There is code duplication in the second and third parts of the script where it's fetching and displaying a card. Refactor the script to a separate function to avoid redundancy.
+//2. The variable deckId is used across different parts of the script without being declared with let or const inside the relevant scopes
+
+
+
+//check out this example
+
+//let cardsBaseUrl = 'https://deckofcardsapi.com/api/deck';
+//let deckId;
+
+// Function to draw a single card
+//function drawCard() {
+//    return axios.get(`${cardsBaseUrl}/${deckId}/draw/`);
+//}
+
+// Function to display a card image
+//function displayCardImage(imgSrc) {
+//    let imgEl = document.createElement('img');
+//    imgEl.src = imgSrc;
+//    cardDiv.append(imgEl);
+//}
+
+//axios.get(`${cardsBaseUrl}/new/shuffle/`)
+//    .then(response => {
+//        deckId = response.data.deck_id;
+//    })
+//    .catch(error => {
+//        console.error('Error while shuffling the deck:', error);
+//    });
+
+//gimmeCard.addEventListener('click', () => {
+//    drawCard()
+//        .then(response => {
+//            let card = response.data.cards[0];
+//            displayCardImage(card.image);
+//            if (response.data.remaining === 0) {
+//                gimmeCard.remove();
+//            }
+//        })
+//        .catch(error => {
+//            console.error('Error while drawing a card:', error);
+//        });
+//});
